@@ -1,1 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Cover Insurance - Get a Quote</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        header {
+            background: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background: #004080;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        form {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background: #003366;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #002244;
+        }
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
 
+<header>
+    <h1>Student Cover Insurance</h1>
+    <p>Insurance for students, by students</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="cover-plans.html">Cover Plans</a>
+    <a href="quote.html">Get a Quote</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+    <h2>Request Your Free Quote</h2>
+    <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+
+    <form action="#" method="post">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Student Email *</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="device">Device to Insure *</label>
+        <select id="device" name="device" required>
+            <option value="">Select device</option>
+            <option value="laptop">Laptop only</option>
+            <option value="phone">Phone only</option>
+            <option value="laptop-phone">Laptop + Phone</option>
+            <option value="all">Laptop + Phone + Tablet</option>
+        </select>
+
+        <label for="plan">Preferred Plan *</label>
+        <select id="plan" name="plan" required>
+            <option value="">Select plan</option>
+            <option value="basic">Basic (P50/month)</option>
+            <option value="standard">Standard (P90/month)</option>
+            <option value="premium">Premium (P150/month)</option>
+        </select>
+
+        <label for="message">Additional Information</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit">Submit Quote Request</button>
+    </form>
+    <p style="margin-top: 15px; font-size: 14px;">* Required fields. We'll contact you within 24 hours.</p>
+</main>
+
+<footer>
+    <p>&copy; 2026 Student Cover Insurance | Email: hello@studentcover.co.bw</p>
+</footer>
+
+</body>
+</html>
