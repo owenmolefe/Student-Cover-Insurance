@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Cover Insurance - Contact</title>
+    <title>Student Cover Insurance - Contact & About</title>
     <style>
         * {
             margin: 0;
@@ -36,35 +36,40 @@
         }
         main {
             padding: 40px 20px;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
-        .contact-grid {
+        .container {
             display: flex;
-            gap: 30px;
-            margin-top: 30px;
+            gap: 40px;
             flex-wrap: wrap;
         }
-        .contact-info {
+        .about-section {
             flex: 1;
             background: #f9f9f9;
-            padding: 20px;
+            padding: 25px;
             border-radius: 10px;
         }
-        .contact-form {
+        .contact-section {
             flex: 1;
             background: #f9f9f9;
-            padding: 20px;
+            padding: 25px;
             border-radius: 10px;
+        }
+        .contact-details {
+            margin: 20px 0;
+        }
+        .contact-details p {
+            margin: 10px 0;
         }
         label {
             display: block;
-            margin-top: 10px;
+            margin-top: 15px;
             font-weight: bold;
         }
         input, textarea {
             width: 100%;
-            padding: 8px;
+            padding: 10px;
             margin-top: 5px;
             border: 1px solid #ddd;
             border-radius: 5px;
@@ -72,11 +77,15 @@
         button {
             background: #003366;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border: none;
             border-radius: 5px;
-            margin-top: 15px;
+            margin-top: 20px;
             cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #002244;
         }
         footer {
             background: #003366;
@@ -84,6 +93,19 @@
             text-align: center;
             padding: 20px;
             margin-top: 40px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #003366;
+        }
+        h3 {
+            margin-bottom: 10px;
+            color: #003366;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -104,36 +126,53 @@
 
 <main>
     <h2>About Us & Contact</h2>
-    
-    <div class="contact-grid">
-        <div class="contact-info">
+
+    <div class="container">
+        <!-- About Us Section -->
+        <div class="about-section">
             <h3>About Student Cover Insurance</h3>
-            <p>We are a student-focused insurance provider based in Botswana. Our mission is to make gadget insurance affordable, simple, and accessible for all students.</p>
+            <p>Student Cover Insurance was founded by students, for students. We understand the challenges of university life and how expensive it can be to replace a stolen or damaged laptop, phone, or tablet.</p>
+            <p style="margin-top: 15px;">Our mission is to provide affordable, simple, and reliable gadget insurance that fits a student's budget. No hidden fees. No complicated forms. Just protection when you need it most.</p>
+            <p style="margin-top: 15px;">We are based in Gaborone, Botswana and serve students across all major universities and colleges.</p>
             
-            <h3 style="margin-top: 20px;">Contact Details</h3>
-            <p>📧 Email: hello@studentcover.co.bw<br>
-            📞 Phone: +267 71 234 567<br>
-            📍 Location: Gaborone, Botswana<br>
-            🕒 Mon-Fri: 9am - 5pm</p>
-            
-            <h3 style="margin-top: 20px;">Follow Us</h3>
-            <p>Instagram | Facebook | Twitter<br>@studentcover</p>
+            <h3 style="margin-top: 25px;">Why Choose Us?</h3>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>✅ Affordable plans from P50/month</li>
+                <li>✅ Fast claims processing within 48 hours</li>
+                <li>✅ Cover for theft, accidental damage, and loss</li>
+                <li>✅ Student-friendly customer support</li>
+            </ul>
         </div>
-        
-        <div class="contact-form">
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h3>Get in Touch</h3>
+            
+            <div class="contact-details">
+                <p>📧 <strong>Email:</strong> hello@studentcover.co.bw</p>
+                <p>📞 <strong>Phone:</strong> +267 71 234 567</p>
+                <p>📍 <strong>Location:</strong> Gaborone, Botswana</p>
+                <p>🕒 <strong>Hours:</strong> Monday - Friday, 9am - 5pm</p>
+                <p>📱 <strong>Social:</strong> @studentcover (Instagram, Facebook, Twitter)</p>
+            </div>
+
             <h3>Send Us a Message</h3>
             <form action="#" method="post">
-                <label>Name *</label>
-                <input type="text" required>
-                
-                <label>Email *</label>
-                <input type="email" required>
-                
-                <label>Message *</label>
-                <textarea rows="4" required></textarea>
-                
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject">
+
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
                 <button type="submit">Send Message</button>
             </form>
+            <p style="margin-top: 10px; font-size: 12px; color: #666;">* Required fields</p>
         </div>
     </div>
 </main>
